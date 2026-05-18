@@ -410,8 +410,8 @@ static void settings_item_change_callback(VariableItem* item) {
 static void settings_menu_callback(void* context, uint32_t index) {
     UNUSED(index);
     AppState* app_state = context;
-    view_dispatcher_switch_to_view(app_state->view_dispatcher, 4); // Switch to settings view
-    app_state->current_view = 4;
+    view_dispatcher_switch_to_view(app_state->view_dispatcher, VIEW_SETTINGS);
+    app_state->current_view = VIEW_SETTINGS;
 }
 
 static void settings_action_callback(void* context, uint32_t index) {
@@ -596,8 +596,8 @@ bool settings_custom_event_callback(void* context, uint32_t event_id) {
         confirmation_view_set_cancel_callback(
             app_state->confirmation_view, app_info_cancel_callback, confirm_ctx);
 
-        view_dispatcher_switch_to_view(app_state->view_dispatcher, 7);
-        app_state->current_view = 7;
+        view_dispatcher_switch_to_view(app_state->view_dispatcher, VIEW_CONFIRMATION);
+        app_state->current_view = VIEW_CONFIRMATION;
         return true;
     }
 

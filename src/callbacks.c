@@ -237,8 +237,8 @@ void show_app_info(void* context) {
 
         // Switch to confirmation view
         FURI_LOG_D("AppInfo", "Switching to confirmation view");
-        view_dispatcher_switch_to_view(app->view_dispatcher, 7); // 7 is confirmation view
-        app->current_view = 7;
+        view_dispatcher_switch_to_view(app->view_dispatcher, VIEW_CONFIRMATION);
+        app->current_view = VIEW_CONFIRMATION;
     } else {
         FURI_LOG_E("AppInfo", "Invalid app state or confirmation view");
     }

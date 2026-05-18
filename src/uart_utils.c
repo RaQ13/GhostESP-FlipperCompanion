@@ -890,12 +890,11 @@ bool uart_receive_data(
 
     // Set the view state before switching
     state->previous_view = state->current_view;
-    state->current_view = 5;
+    state->current_view = VIEW_TEXT_BOX;
 
-    // Process any pending events before view switch
     furi_delay_ms(5);
 
-    view_dispatcher_switch_to_view(view_dispatcher, 5);
+    view_dispatcher_switch_to_view(view_dispatcher, VIEW_TEXT_BOX);
 
     return true;
 }
