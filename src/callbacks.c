@@ -205,12 +205,13 @@ void show_app_info(void* context) {
 
     FURI_LOG_D("AppInfo", "Show app info called, context: %p", app);
 
-    const char* info_text = "Created by: Spooky\n"
+    const char* info_text = "Version: v1.7.0\n"
+                            "Created by: Spooky\n"
                             "Updated by:\n"
                             "@jaylikesbunda\n"
                             "@tototo31\n"
                             "Built with <3\n"
-                            "github.com/jaylikesbunda/ghost_esp\n\n";
+                            "GhostESP-Revival/GhostESP-FlipperCompanion\n\n";
 
     if(app && app->confirmation_view) {
         // Create a new context for the confirmation dialog
